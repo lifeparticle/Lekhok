@@ -13,24 +13,27 @@
 	<div class="container center-align">
 		<h3>Lekhok</h3>
 		<div class="row">
-			<form id="image-form">
-				<div class="file-field input-field">
-					<div class="btn black">
-						<span>Browse</span>
-						<input type="file" id="img" />
+			<div class="col s6">
+				<form id="image-form">
+					<div class="file-field input-field">
+						<div class="btn black">
+							<span>Browse</span>
+							<input type="file" id="img" />
+						</div>
+						<div class="file-path-wrapper">
+							<input type="text" class="file-path validate" placeholder="Choose an image for OCR" required/>
+						</div>
 					</div>
-					<div class="file-path-wrapper">
-						<input type="text" class="file-path validate" placeholder="Choose an image for OCR" required/>
+					<input type="submit" value="Process" class="btn-large black" />
+				</form>
+				<div class="card large">
+					<div class="card-content">
+						<textarea class="materialize-textarea" id="ta"></textarea>
 					</div>
 				</div>
-				<input type="submit" value="Process" class="btn-large black" />
-			</form>
-		</div>
-		<div class="row">
-			<div class="card large">
-				<div class="card-content">
-					<textarea class="materialize-textarea" id="ta"></textarea>
-				</div>
+			</div>
+			<div class="col s6">
+				2
 			</div>
 		</div>
 	</div>

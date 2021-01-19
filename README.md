@@ -7,10 +7,10 @@ Development
 
 Run
 ```bash
- npm run dev
- ```
+npm run dev
+```
 
 Build
 ```bash
- npm run make
+npm run make
 ```
