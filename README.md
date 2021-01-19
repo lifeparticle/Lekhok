@@ -5,7 +5,12 @@
 
 Development
 
+Run
 ```bash
  npm run dev
- npm run make
  ```
+
+Build
+```bash
+ npm run make
+```
