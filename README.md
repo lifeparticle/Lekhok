@@ -1,2 +1,5 @@
-# bocr
-bocr
+# Lekhok
+
+```bash
+ npm run dev
+ ```

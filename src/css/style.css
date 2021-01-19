@@ -1,0 +1,12 @@
+body, html {
+	overflow: hidden;
+}
+
+#ta {
+	height: -webkit-fill-available;
+	border-bottom: none;
+}
+
+.card.large .card-content {
+	overflow: scroll;
+}
