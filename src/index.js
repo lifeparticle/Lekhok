@@ -65,7 +65,7 @@ async function processImage({ imgPath, lang }) {
 
 		const worker = createWorker({
 			cachePath: path.join(__dirname, 'traineddata'),
-			logger: m => console.log(m),
+			logger: m => console.log(m.progress),
 		});
 
 		(async () => {

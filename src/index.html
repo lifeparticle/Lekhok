@@ -31,6 +31,9 @@
 						<textarea class="materialize-textarea" id="ta"></textarea>
 					</div>
 				</div>
+				<div>
+					<p id="progress"></p>
+				</div>
 			</div>
 			<div class="col s6">
 				2
@@ -59,6 +62,12 @@
 			M.toast({
 				html: `Done`,
 			});
+		});
+
+		// On done
+		ipcRenderer.on('image:progress', (e, data) => {
+			document.getElementById('progress').innerHTML = data;
+
 		});
 	</script>
 </body>
