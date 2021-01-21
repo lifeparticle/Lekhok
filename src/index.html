@@ -24,15 +24,12 @@
 							<input type="text" class="file-path validate" placeholder="Choose an image for OCR" required/>
 						</div>
 					</div>
-					<input type="submit" value="Process" class="btn-large black" />
+					<input type="submit" value="Process" class="btn-large black" id="subBt"/>
 				</form>
 				<div class="card large">
 					<div class="card-content">
 						<textarea class="materialize-textarea" id="ta"></textarea>
 					</div>
-				</div>
-				<div>
-					<p id="progress"></p>
 				</div>
 			</div>
 			<div class="col s6">
@@ -48,9 +45,11 @@
 		const form = document.getElementById('image-form');
 		const img = document.getElementById('img');
 		const lang = 'ben';
+		const subBt = document.getElementById("subBt");
 
 		// On submit
 		form.addEventListener('submit', (e) => {
+			startLoader();
 			e.preventDefault();
 			const imgPath = img.files[0].path;
 			ipcRenderer.send('image:ocr', { imgPath, lang, });
@@ -58,17 +57,28 @@
 
 		// On done
 		ipcRenderer.on('image:done', (e, data) => {
+			endLoader();
 			document.getElementById('ta').innerHTML = data;
 			M.toast({
 				html: `Done`,
 			});
 		});
 
-		// On done
-		ipcRenderer.on('image:progress', (e, data) => {
-			document.getElementById('progress').innerHTML = data;
+		// // On done todo
+		// ipcRenderer.on('image:progress', (e, data) => {
+		// 	document.getElementById('progress').innerHTML = data;
 
-		});
+		// });
+
+		function startLoader() {
+			subBt.value = "Processing";
+			subBt.disabled = true;
+		}
+
+		function endLoader() {
+			subBt.value = "Process";
+			subBt.disabled = false;
+		}
 	</script>
 </body>
 </html>
