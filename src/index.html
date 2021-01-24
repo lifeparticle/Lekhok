@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/all.min.css" />
 	<link rel="stylesheet" href="css/materialize.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/trix.css">
+	<script type="text/javascript" src="js/trix.js"></script>
 </head>
 <body>
 	<div class="container center-align">
@@ -27,9 +29,7 @@
 					<input type="submit" value="Process" class="btn-large black" id="subBt"/>
 				</form>
 				<div class="card large">
-					<div class="card-content">
-						<textarea class="materialize-textarea" id="ta"></textarea>
-					</div>
+					<trix-editor input="x" id="ta"></trix-editor>
 				</div>
 			</div>
 			<div class="col s6">
