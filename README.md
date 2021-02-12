@@ -5,6 +5,11 @@
 
 Development
 ============
+
+```
+npm i -g @electron-forge/cli
+```
+
 Run
 ```bash
 npm run dev
